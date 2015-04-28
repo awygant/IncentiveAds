@@ -1,0 +1,170 @@
+#uploadSuccessContainer{
+    display:none;
+}
+
+#uploadPhoto{
+    position:relative;
+    display:inline-block;
+}
+
+#uploadPhoto img{
+    max-width:250px;
+    border-radius:3px;
+}
+
+#uploadPhoto p{
+    text-align:center;
+    margin:15px;
+}
+
+.success, .warning{
+    text-align:center;
+    border:1px solid;
+    border-radius:3px;
+    padding:5px;
+}
+
+.success{
+    color:#009944;
+    background-color:rgba(0, 153, 68, 0.15);
+    border-color:#009944;
+}
+
+.warning{
+    color:#990044;
+    background-color:rgba(153, 0, 68, 0.15);
+    border-color:#990044;
+}
+
+.pseudoButton{
+    position:absolute;
+    left:0;
+    top:0;
+    background-image:url("../img/photo.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-color:#eee !important;
+    pointer-events:none;
+    border:1px solid #ccc;
+    color:#aaa;
+    margin-bottom:15px;
+}
+
+.pseudoButton, .hiddenButton{
+    width:250px;
+    height:250px;
+    line-height:450px;
+    padding:0;
+    background-color:#1665c4;
+}
+
+#imgPreviewWrapper, #faceFinderLoadWrapper{
+    width:248px;
+    height:248px;
+    background-color:#eee;
+    display:inline-block;
+}
+
+#faceFinderLoadWrapper{
+    border:1px solid #ccc;
+
+}
+
+#imgPreviewWrapper{
+    position:absolute;
+    top:1px;
+    left:1px;
+    overflow:hidden;
+    display:none;
+    pointer-events:none;
+}
+
+#imgPreview{
+    height:100%;
+    position:absolute;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+
+.cancelForm{
+    display:none;
+}
+
+.loading{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.loading .gearOne{
+    background-image:url("../img/loading/gear-1.png");
+    background-image:url("../img/loading/gear-1.svg");
+    background-size:contain;
+    display:inline-block;
+    width: 52px;
+    height:52px;
+    margin-right: -6px;
+}
+
+.loading .gearTwo{
+    background-image:url("../img/loading/gear-2.png");
+    background-image:url("../img/loading/gear-2.svg");
+    background-size:contain;
+    display:inline-block;
+    width: 69px;
+    height: 69px;
+    margin-bottom: 7px;
+}
+
+.loading .gearThree{
+    background-image:url("../img/loading/gear-3.png");
+    background-image:url("../img/loading/gear-3.svg");
+    background-size:contain;
+    display:inline-block;
+    width: 47px;
+    height: 47px;
+    margin-left: -10px;
+}
+
+/* Spinner animation */
+.spinner{
+    -webkit-animation-name: spin, flash;
+    -webkit-animation-duration: 4000ms, 800ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin, flash;
+    -moz-animation-duration: 4000ms, 800ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin, flash;
+    -ms-animation-duration: 4000ms, 800ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin,flash;
+    animation-duration: 4000ms, 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    animation-direction:normal, alternate;
+    -webkit-animation-direction:normal, alternate;
+
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -ms-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+.reverseSpinner{
+    -webkit-animation-name: reverseSpin, flash;
+    -moz-animation-name: reverseSpin, flash;
+    -ms-animation-name: reverseSpin, flash;
+    animation-name: reverseSpin,flash;
+}

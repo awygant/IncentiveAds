@@ -1,0 +1,253 @@
+body{
+    background-image:url("../img/rough-pattern-light.jpg");
+}
+
+h3{
+    background:none;
+}
+
+button{
+    font-family: "Amaranth", sans-serif;
+    padding:20px 40px;
+    padding-bottom:16px;
+    background:rgba(0,0,0,0);
+    border:4px solid #141211;
+    border-radius:0;
+    color:#141211;
+}
+
+
+button.inverted{
+    color:#fff;
+    border-color:#fff;
+}
+
+button.small{
+    padding:10px 20px;
+    padding-bottom:8px;
+    border-width: 2px;
+}
+
+.banner{
+    max-width:100%;
+    min-height:200px;
+    max-height:250px;
+    overflow:hidden;
+    background-image:url("../img/Banners/banner-bg.png");
+    background-size:cover;
+    line-height:200px;
+}
+
+.banner img{
+    max-width:100%;
+    max-height:200px;
+    margin:25px 0;
+}
+
+#faceFinder{
+    display:none;
+}
+
+.center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.card{
+    background-color:#eee;
+    border:1px solid #e5e5e5;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #eee;
+    padding:5px;
+    margin:5px;
+    display:inline-block;
+    vertical-align: top;
+    height:250px;
+    text-align:center;
+}
+
+.card img{
+    border:1px solid #e5e5e5;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+    max-height:100%;
+    max-width:100%;
+    padding:3px;
+    background:#fff;
+}
+
+.text-card{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    border:1px solid #e5e5e5;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+    padding:20px;
+    max-width:250px;
+    text-align:center;
+    color:#1665c4;
+}
+
+.full-size{
+    height:auto !important;
+    max-width:100%;
+}
+
+.vertical-padded{
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.approved{
+    box-shadow: 0 0 5px 1px #54c682;
+}
+
+.success, .warning{
+    text-align:center;
+    border:1px solid;
+    border-radius:3px;
+    padding:5px;
+}
+
+.success{
+    color:#009944;
+    background-color:rgba(0, 153, 68, 0.15);
+    border-color:#009944;
+}
+
+.warning{
+    color:#990044;
+    background-color:rgba(153, 0, 68, 0.15);
+    border-color:#990044;
+}
+
+#messages{
+    display:none;
+}
+
+#statusBar{
+    background:#fff;
+    display:inline-block;
+    width:100%;
+    max-width:730px;
+    height:25px;
+    padding:3px;
+    border:1px solid #e5e5e5;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #eee;
+}
+
+.completed{
+    border:1px solid #e5e5e5;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+    background:#1665c4;
+    height:100%;
+    width:0%;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+}
+
+.statusMsg{
+    text-align:center;
+}
+
+.arrow{
+    width:25px;
+    height:25px;
+    background-image:url("../img/arrow-grey.png");
+    background-image:url("../img/arrow-grey.svg");
+    background-repeat:no-repeat;
+    background-position:center center;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transform: rotate(90deg);
+}
+
+.about-logo{
+    width:200px;
+    max-width:100%;
+    margin: 15px 0;
+}
+
+.navbar-flash{
+    border-bottom:3px solid rgba(0,0,0,0.3);
+}
+
+.navbar-flash, #footer{
+    background-color:rgba(15,15,15,0.9);
+    background-image:url("../img/rough-pattern.jpg");
+}
+
+.shareOptions{
+    display:none;
+    vertical-align:top;
+    overflow:hidden;
+}
+
+.facebookShare{
+    color:#3b5998;
+    border-color:#3b5998;
+}
+
+.twitterShare{
+    color:#55acee;
+    border-color:#55acee;
+}
+
+#footer{
+    border-top:6px solid rgba(0,0,0,0.3);
+    padding-top:15px;
+}
+
+@media(max-width:992px){
+    .card{
+        width:48%;
+    }
+    .text-card{
+        max-width:none;
+    }
+}
+
+@media(min-width:769px){
+    .vertical-center{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        margin: 0;
+    }
+    .dynamic.arrow{
+        transform: rotate(0deg);
+    }
+}
+
+@media(max-width:768px){
+    .card{
+        width:100%;
+        height:auto;
+    }
+
+    h2{
+        font-size: 22pt;
+    }
+
+    .banner{
+        min-height: 100px;
+        line-height:100px;
+    }
+
+    .banner img{
+        margin:5px 0;
+        max-height:150px;
+    }
+
+}
