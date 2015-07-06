@@ -30,7 +30,7 @@ if(isset($_SESSION["email"]) && $ffid > 0 && isset($GLOBALS["CTA_text"])){
     <title>Rewards</title>
     <?php include_once("includes/meta.php");?>
     <?php include_once("includes/resources.php"); ?>
-    <?php include_once("includes/cookies.php"); ?>
+    <?php //include_once("includes/cookies.php"); ?>
 
     <script type = "text/javascript" src = "flashfoto/js/jquery-2.1.1.min.js"></script>
     <script type = "text/javascript" src = "js/incentiveAds.js"></script>

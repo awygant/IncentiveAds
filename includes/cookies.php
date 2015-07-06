@@ -1,24 +1,48 @@
 <script type = "text/javascript">
 <?php
 
-if(isset($_SESSION["ensightenCookie"])){
-    $ensightenCookie = $_SESSION["ensightenCookie"];
+
+
+if(isset($_SESSION["gender"]) && strlen($_SESSION["gender"]) > 0){
+    if($_SESSION["gender"] == 'male'){
+        $defaultScenes = $GLOBALS["default_male_scenes"];
+    }
+    else{
+        $defaultScenes = $GLOBALS["default_female_scenes"];
+    }
 }
-else if(isset($_SESSION["finishedAds"])){
+else{
+    $defaultScenes = array_merge($GLOBALS["default_male_scenes"], $GLOBALS["default_female_scenes"]);
+}
+
+if(isset($_SESSION["finishedAds"])){
     $ensightenCookie = array();
     $ads = $_SESSION["finishedAds"];
     foreach($ads as $ad){
-        $ffurl = $api_base_url . "get/" . $ad["ImageVersion"]["image_id"];
-        array_push($ensightenCookie, $ffurl);
+
+        $ffImgId = $ad["ImageVersion"]["image_id"];
+        $meta = $ad["Meta"];
+        $title = $meta->title;
+
+        $adsData = array(
+            "title"=>$title,
+            "image_id"=>$ffImgId
+        );
+        array_push($ensightenCookie, $adsData);
     }
     $_SESSION["ensightenCookie"] = $ensightenCookie;
-}
-else{
-    $ensightenCookie = array("https://flashfotoapi.com/api/get/3378019", "https://flashfotoapi.com/api/get/3378014", "https://flashfotoapi.com/api/get/3378015", "https://flashfotoapi.com/api/get/3378016", "https://flashfotoapi.com/api/get/3378017", "https://flashfotoapi.com/api/get/3378018", "https://flashfotoapi.com/api/get/3378020", "https://flashfotoapi.com/api/get/3378021");
+    $default_and_personalized = array(
+        "Default"=>$defaultScenes,
+        "Personalized"=>$ensightenCookie
+    );
+    echo ("console.log(JSON.stringify(" . json_encode($default_and_personalized) . "));");
 }
 
-echo ("console.log('" . json_encode($ensightenCookie) . "');");
+else{
+    echo ("console.log(JSON.stringify(" . json_encode($defaultScenes) . "));");
+}
 
 ?>
 
 </script>
+

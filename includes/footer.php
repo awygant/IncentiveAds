@@ -41,6 +41,6 @@
                 <a href = "http://www.flashfotoinc.com/entertainment.php" target = "_blank">Entertainment</a>
             </div>
         </div>
-        <p class = "text-muted text-center">&copy; Flashfoto, Inc. 2015</p>
+        <p class = "text-muted text-center">&copy; Flashfoto, Inc. 2015 | <a href = "http://www.flashfotoinc.com/legal.php" target="_blank">Legal</a></p>
     </div>
 </div>

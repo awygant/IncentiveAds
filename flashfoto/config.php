@@ -5,7 +5,7 @@ global $banner;
 global $CTA_text;
 global $campaign_id;
 global $ads_api_url;
-
+global $default_male_scenes, $default_female_scenes;
 // ***** DEV PARTNER CONFIGURATION ***** //
 
 // Fashion Options
@@ -45,23 +45,63 @@ global $ads_api_url;
 */
 
 // Automotive Options
-
+/*
 $banner = "img/Banners/auto.png";
 $CTA_text = "Earn $500 Cash Back With Any New Vehicle Purchase";
 $partner_id = "32";
 $partner_username = "anna";
 $partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
-
+*/
 $campaign_id = "6022795555198";
+
+// Anheuser-Busch Options
+$banner = "img/Banners/ab.png";
+$CTA_text = "Participate for a free drink coupon!";
+$partner_id = 35;
+$partner_username = "anna";
+$partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
+
 
 $api_base_url = "http://www.flashfotoapi.com/api/";
 // ***** END PRODUCTION PARTNER CONFIG ***** //
 
 $ads_api_url = "http://www.fotam.com/api/ads/add";
 
+$default_female_scenes = array();
+array_push($default_female_scenes, array(
+    "title"=>"You look great in this NX",
+    "image_id"=>"3378019"
+));
+array_push($default_female_scenes, array(
+    "title"=>"The All-New NX.",
+    "image_id"=>"3378015"
+));
+array_push($default_female_scenes, array(
+    "title"=>"The All-New RCF.",
+    "image_id"=>"3378017"
+));
+array_push($default_female_scenes, array(
+    "title"=>"It's Your Turn",
+    "image_id"=>"3378020"
+));
 
-
-
+$default_male_scenes = array();
+array_push($default_male_scenes, array(
+    "title"=>"You look great in this NX",
+    "image_id"=>"3378014"
+));
+array_push($default_male_scenes, array(
+    "title"=>"The All-New NX.",
+    "image_id"=>"3378016"
+));
+array_push($default_male_scenes, array(
+    "title"=>"The All-New RCF.",
+    "image_id"=>"3378018"
+));
+array_push($default_male_scenes, array(
+    "title"=>"It's Your Turn",
+    "image_id"=>"3378021"
+));
 
 
 
@@ -77,8 +117,8 @@ else
     $partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
 */
 
-//define('ROOT_DIRECTORY', '/');
-define('ROOT_DIRECTORY', '/~Anna/IncentiveAds/');
+define('ROOT_DIRECTORY', '/');
+//define('ROOT_DIRECTORY', '/~Anna/IncentiveAds/');
 global $server_name, $auth_callback_url; // used in fotam-test.php and for navigation logout button
 $server_name = 'http://'.$_SERVER['HTTP_HOST'].ROOT_DIRECTORY;
 $base_url = $server_name; //need to consolidate this

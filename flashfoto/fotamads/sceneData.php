@@ -16,11 +16,11 @@ $db_password = "hollywood";
 $api_base_url = "http://dev.flashfotoapi.com/api/";
 
 // ****** PROD DATABASE CONFIG ****** //
-/*$db_host = "10.181.133.85";
+$db_host = "10.181.133.85";
 $db_user = "flashfoto";
 $db_password = "ff-fb-vjFi9q2Kz9h";
 $api_base_url = "http://www.flashfotoapi.com/api/";
-*/
+
 
 
 $db_database = "FlashFoto_facebook";

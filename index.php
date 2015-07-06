@@ -22,7 +22,7 @@ if(!isset($_SESSION["email"])){
         <title>Upload</title>
         <?php include_once("includes/meta.php");?>
         <?php include_once("includes/resources.php"); ?>
-        <?php include_once("includes/cookies.php"); ?>
+        <?php //include_once("includes/cookies.php"); ?>
 
         <script type = "text/javascript">
 

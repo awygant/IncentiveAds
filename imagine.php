@@ -21,7 +21,7 @@ if(!isset($_SESSION["email"])){
         <title>Imagine</title>
         <?php include_once("includes/meta.php");?>
         <?php include_once("includes/resources.php"); ?>
-        <?php include_once("includes/cookies.php"); ?>
+        <?php //include_once("includes/cookies.php"); ?>
 
         <script type = "text/javascript" src = "flashfoto/js/jquery-2.1.1.min.js"></script>
         <script type = "text/javascript" src = "flashfoto/fotamads/js/fotamads.js"></script>
