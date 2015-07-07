@@ -13,6 +13,7 @@ foreach($scenePayload as $scene){
     facebookAd($scene, $api_base_url);
 }
 
+// Use this instead of the foreach above to create only one ad.
 // facebookAd($scenePayload[0], $api_base_url);
 
 function facebookAd($scenePayload, $api_base_url){

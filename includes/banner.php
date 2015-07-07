@@ -1,5 +1,5 @@
 <?php
 
-echo "<div class = \"banner\"><img src = \"" . $GLOBALS["banner"] . "\" alt = \"" . $GLOBALS["CTA_text"] . "\"/></div>";
+echo "<div class = \"banner\"><img src = \"" . $partner->banner_location . "\" alt = \"" . $partner->cta_text . "\"/></div>";
 
 ?>

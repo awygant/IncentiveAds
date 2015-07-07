@@ -52,17 +52,17 @@ $partner_id = "32";
 $partner_username = "anna";
 $partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
 */
-$campaign_id = "6022795555198";
+//$campaign_id = "6022795555198";
 
 // Anheuser-Busch Options
-$banner = "img/Banners/ab.png";
+/*$banner = "img/Banners/ab.png";
 $CTA_text = "Participate for a free drink coupon!";
 $partner_id = 35;
 $partner_username = "anna";
 $partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
+*/
 
-
-$api_base_url = "http://www.flashfotoapi.com/api/";
+//$api_base_url = "http://www.flashfotoapi.com/api/";
 // ***** END PRODUCTION PARTNER CONFIG ***** //
 
 $ads_api_url = "http://www.fotam.com/api/ads/add";
@@ -117,8 +117,8 @@ else
     $partner_apikey = "N68NiThCGapPK0YCceYloq5Ua2jUdzQS";
 */
 
-define('ROOT_DIRECTORY', '/');
-//define('ROOT_DIRECTORY', '/~Anna/IncentiveAds/');
+//define('ROOT_DIRECTORY', '/');
+define('ROOT_DIRECTORY', '/~Anna/IncentiveAds/');
 global $server_name, $auth_callback_url; // used in fotam-test.php and for navigation logout button
 $server_name = 'http://'.$_SERVER['HTTP_HOST'].ROOT_DIRECTORY;
 $base_url = $server_name; //need to consolidate this
@@ -147,6 +147,20 @@ $admins = array(65,89,101); //these are staging.onzra.com ID's
 $admins = array(1,4); //these are login.fotam.com ID's
 
 /***** END FOTAM LOGIN SETTINGS ******/
+
+
+
+
+// If we haven't set these necessary values, try looking in the SESSION:
+if(empty($partner_username) || empty($partner_apikey) || empty($api_base_url)) {
+    if(isset($_SESSION["partner_username"]) && isset($_SESSION["partner_apikey"]) && isset($_SESSION["api_base_url"]))
+    {
+        $partner_username = $_SESSION["partner_username"];
+        $partner_apikey = $_SESSION["partner_apikey"];
+        $api_base_url = $_SESSION["api_base_url"];
+    }
+}
+
 
 
 ?>

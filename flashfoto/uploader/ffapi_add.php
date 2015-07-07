@@ -6,8 +6,9 @@ include_once('../flashfoto.php');
 
 
 if(empty($partner_username) || empty($partner_apikey) || empty($api_base_url)) {
-	$err = 'Please configure your settings in config.inc.php';
+    $err = 'Please configure your settings in config.inc.php';
 }
+
 $FlashFotoAPI = new FlashFoto($partner_username, $partner_apikey, $api_base_url);
  	if (isset($_FILES["image"])) {
 

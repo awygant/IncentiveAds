@@ -2,6 +2,12 @@
 
 include_once("includes/session.php");
 include_once("flashfoto/config.php");
+include_once("includes/partner_config.php");
+
+$partner = new PartnerConfig();
+$partner->choose($_SESSION["chosen_partner"]);
+include("includes/set_api_info.php");
+
 
 $ffid = 0;
 if(isset($_GET["ffid"]))
@@ -28,9 +34,9 @@ if(!isset($_SESSION["email"])){
         <script type = "text/javascript" src = "js/incentiveAds.js"></script>
         <script type = "text/javascript">
             <?php
-            echo "var api_base_url = \"" . $GLOBALS["api_base_url"] . "\";";
+            echo "var api_base_url = \"" . $partner->api_base_url . "\";";
             echo "var headFfid = " . $ffid . ";";
-            echo "var partner_id = " . $GLOBALS["partner_id"] . ";";
+            echo "var partner_id = " . $partner->chosen_partner . ";";
              ?>
             $(document).ready(function(){
                 mainInterface = $("#scenes");

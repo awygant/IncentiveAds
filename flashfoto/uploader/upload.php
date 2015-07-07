@@ -1,7 +1,5 @@
 <?php include_once("flashfoto/config.php");?>
-<script type = "text/javascript">
-    window.api_base_url = "<?php echo $api_base_url;?>";
-</script>
+
 <script type = "text/javascript" src = "flashfoto/js/jquery-2.1.1.min.js"></script>
 <script type = "text/javascript" src = "flashfoto/uploader/js/Upload.js"></script>
 
