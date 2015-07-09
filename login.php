@@ -16,7 +16,6 @@ include_once("flashfoto/config.php");
 <body>
 <?php include_once("includes/nav.php");?>
 <div id = "wrap">
-    <?php include_once ("includes/banner.php") ?>
     <div class = "container text-center">
         <?php include_once("includes/CTA_text.php");?>
         <p class = "text-center">Login to access rewards!</p>
